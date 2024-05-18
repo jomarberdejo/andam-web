@@ -14,8 +14,8 @@ export default function Admins() {
       <div className="px-8 pt-6 container">
         <p className="text-md text-muted-foreground">
           Here are the lists of all registered residents in the{" "}
-          <span className="font-bold text-lg text-white">ANDAM</span> app for
-          Carigara, Leyte!
+          <span className="font-bold text-lg text-muted-foreground">ANDAM</span>{" "}
+          app for Carigara, Leyte!
         </p>
       </div>
 

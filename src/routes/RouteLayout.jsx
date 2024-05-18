@@ -21,6 +21,8 @@ import ReportItem from "@/pages/reports/_custom_components/report-item";
 import NotFound from "@/pages/404";
 import Resident from "@/pages/residents";
 import ResidentProfile from "@/pages/residents/_custom_components/resident-profile";
+import Feedback from "../pages/feedback";
+import GroupFeedback from "../pages/feedback/_custom_components/GroupFeedback";
 
 const RouteLayout = () => {
   const { isLoggedIn } = useAuth();
@@ -42,12 +44,15 @@ const RouteLayout = () => {
             <Route path="/admins" element={<AgencyAdmin />} />
             <Route path="/residents" element={<Resident />} />
             <Route path="/residents/:id" element={<ResidentProfile />} />
+            <Route path="/maps" element={<Maps />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/feedback/:id" element={<GroupFeedback />} />
             <Route path="/profile/" element={<Profile />}>
               <Route path="account" element={<AccountForm />} />
               <Route path="contact" element={<ContactForm />} />
               <Route index element={<Navigate to="/profile/account" />} />
             </Route>
-            <Route path="/maps" element={<Maps />} />
+
             <Route path="*" element={<NotFound />} />
           </>
         ) : (
