@@ -21,7 +21,7 @@ export const FeedbackItem = ({ item, onClick }) => {
             <img
               src={item?.Resident.imageIdentityUrl}
               alt={`${item.fullName}'s Avatar`}
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full object-cover"
             />
           )}
         </div>
